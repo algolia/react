@@ -78,11 +78,11 @@ id: home
       <div id="markdownExample"></div>
     </div>
   </div>
-  <script src="/react/js/marked.min.js"></script>
-  <script src="/react/js/examples/hello.js"></script>
-  <script src="/react/js/examples/timer.js"></script>
-  <script src="/react/js/examples/todo.js"></script>
-  <script src="/react/js/examples/markdown.js"></script>
+  <script src="/js/marked.min.js"></script>
+  <script src="/js/examples/hello.js"></script>
+  <script src="/js/examples/timer.js"></script>
+  <script src="/js/examples/todo.js"></script>
+  <script src="/js/examples/markdown.js"></script>
 </section>
 <hr class="home-divider" />
 <section class="home-bottom-section">
