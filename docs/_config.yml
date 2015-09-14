@@ -36,4 +36,46 @@ sass:
   sass_dir: _css
 gems:
 - jekyll-redirect-from
+- algoliasearch-jekyll
 react_version: 0.14.0-alpha
+
+algolia:
+  application_id: YE0A9ATLJG
+  index_name: reactjs
+  record_css_selector: p,li,tr,h1,h2,h3,h4,h5,h6
+  settings:
+    highlightPostTag: </em>
+    highlightPreTag: <em>
+    minWordSizefor1Typo: 3
+    minWordSizefor2Typos: 7
+    ignorePlurals: true
+    attributesToIndex:
+      - title
+      - text
+      - category,subcategory,display_title
+    attributesToHighlight:
+      - category
+      - subcategory
+      - display_title
+      - text
+    customRanking:
+      - desc(localized)
+      - desc(page_score)
+      - desc(weight_tag_name)
+      - asc(weight_order)
+      - desc(posted_at)
+    ranking:
+      - typo
+      - words
+      - proximity
+      - attribute
+      - custom
+    attributesToSnippet:
+      - text:20
+    attributesForFaceting:
+      - locale
+    replaceSynonymsInHighlight: false
+    synonyms:
+      -
+        - v0
+        - '0'

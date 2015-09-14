@@ -1,0 +1,102 @@
+@import 'variables.scss';
+
+// Search input in the navbar
+#react-search-input {
+  border-radius: 5px;
+  line-height: 2.5em;
+  padding: 0 5px;
+  vertical-align: middle !important;
+  width: 280px;
+}
+
+// Main autocomplete wrapper
+.nav-main .aa-dropdown-menu {
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid $darkestColor;
+  color: $darkTextColor;
+  font-size: 14px;
+  margin: 2px 0 0;
+  left: -230px !important;
+  padding: 4px;
+  text-align: left;
+  width: 510px;
+
+  em {
+    font-style: normal;
+  }
+}
+
+// Suggestion category separator
+.nav-main .suggestion-category {
+  background-color: $darkColor;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  color: $lightTextColor;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: left;
+
+  em {
+    background-color: $mediumColor;
+  }
+}
+
+// Use table display for the two columns
+.nav-main .suggestion {
+  display: table;
+  width: 100%;
+}
+
+.nav-main  .suggestion-subcategory-main {
+  background-color: $primary;
+  border-right: 1px solid $darkColor;
+  color: $lightTextColor;
+  display: table-cell;
+  max-width: 150px;
+  min-width: 150px;
+  overflow: hidden;
+  padding: 5px 7px 5px 5px;
+  text-align: right;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  width: 150px;
+
+  em {
+    color: $darkestColor;
+  }
+
+  code {
+    color: $lightTextColor;
+  }
+}
+
+.nav-main .suggestion-content {
+  border-bottom: 1px solid $lightColor;
+  cursor: pointer;
+  display: table-cell;
+  padding: 5px 10px;
+
+  em {
+    background-color: lighten($orangeColor, 25%);
+  }
+}
+
+.nav-main .suggestion-title {
+  color: $darkTextColor;
+  font-weight: bold;
+}
+
+.nav-main .suggestion-text {
+  color: $darkTextColor;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+.nav-main .aa-cursor .suggestion-title,
+.nav-main .aa-cursor .suggestion-text,
+.nav-main .aa-cursor .suggestion-title code,
+.nav-main .aa-cursor .suggestion-title em {
+  color: $linkColor;
+}
