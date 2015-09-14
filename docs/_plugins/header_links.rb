@@ -6,12 +6,16 @@ require 'sanitize'
 
 class Redcarpet::Render::HTML
   def header(title, level)
-    clean_title = Sanitize.clean(title)
+    clean_title = Redcarpet::Render::HTML.generate_id(title)
+
+    return "<h#{level}><a class=\"anchor\" name=\"#{clean_title}\"></a>#{title} <a class=\"hash-link\" href=\"##{clean_title}\">#</a></h#{level}>"
+  end
+
+  def self.generate_id(title)
+    Sanitize.clean(title)
       .downcase
       .gsub(/\s+/, "-")
       .gsub(/[^A-Za-z0-9\-_.]/, "")
-
-    return "<h#{level}><a class=\"anchor\" name=\"#{clean_title}\"></a>#{title} <a class=\"hash-link\" href=\"##{clean_title}\">#</a></h#{level}>"
   end
 end
 

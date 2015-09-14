@@ -4,7 +4,8 @@ gem 'rake'
 
 # jekyll, which builds it all
 # 2.0 includes sass processing
-gem 'jekyll', '~>2.0'
+# 2.5 is needed for algoliasearch-jekyll
+gem 'jekyll', '~> 2.5.3'
 
 # Auto redirect pages
 gem 'jekyll-redirect-from'
@@ -17,3 +18,7 @@ gem 'rb-fsevent'
 
 # For markdown header cleanup
 gem 'sanitize', '~>2.0'
+
+group :jekyll_plugins do
+  gem 'algoliasearch-jekyll', '~> 0.4.3'
+end
