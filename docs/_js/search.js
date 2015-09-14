@@ -3,7 +3,7 @@
 (function($) {
   'use strict';
 
-  var algolia = algoliasearch('YE0A9ATLJG', '1abceba46dace8485375bc325f0144b5');
+  var algolia = algoliasearch('latency', '1ac1bc6022cf1c8f567313685c1b846a');
   var $searchInput = $('#react-search-input');
 
   // compute facetFilters based on the navigator locale
